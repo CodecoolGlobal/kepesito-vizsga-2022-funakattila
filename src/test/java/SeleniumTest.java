@@ -1,12 +1,29 @@
-public class SeleniumTest {
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class SeleniumTest extends BaseTest{
+
 
     /*
     Tölts be a böngészőbe az alábbi oldalt: https://demo.seleniumeasy.com/basic-first-form-demo.html
     Írj tesztesetet két szám összegének ellenőrzésére a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. Az oldalon, a Two Input Fields” szekcióban két beviteli mezőjét töltsd ki tetszőleges számokkal, majd végezd el a számok összeadásának ellenőrzését kiolvasva az oldalon megjelenő összeget.
     Használj tetszőleges tesztadatot
      */
-    public void TestInput()
-    {}
+    @Test
+    public void TestInput() {
+        BasicFormPage basicFormPage = new BasicFormPage(driver, wait);
+
+        basicFormPage.navigate();
+        basicFormPage.closePopup();
+        basicFormPage.addNumbers(TestData.sum1, TestData.sum2);
+        basicFormPage.clickGetTotalButton();
+
+        String expected = TestData.expectedTotal;
+        String actual = basicFormPage.getResult();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: zhttps://demo.seleniumeasy.com/basic-select-dropdown-demo.html
