@@ -30,8 +30,18 @@ public class SeleniumTest extends BaseTest{
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet a következők szerint: a Select List Demo szekció lenyíló mezőjében válaszd ki a hét utolsó napját és ellenőrizd, hogy az oldalon helyesen jelenik meg a kiválasztott érték
     Tesztadatként használd az hét utolsó napját
      */
-    public void SelectDayTest()
-    {}
+    @Test
+    public void SelectDayTest() {
+        DropDownListPage dropDownListPage = new DropDownListPage(driver, wait);
+
+        dropDownListPage.navigate();
+        dropDownListPage.selectLastValue();
+
+        String expected =TestData.selectedDayMessage;
+        String actual = dropDownListPage.getResult();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/bootstrap-modal-demo.html#
