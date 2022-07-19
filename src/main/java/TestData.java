@@ -9,7 +9,10 @@ public class TestData {
     public static String selectedDayMessage = "Day selected :- Saturday";
 
     //TC03
-
     public static String modalMessage = "This is the place where the content for the modal dialog displays";
+
+    //TC04
+    public static String[] names = {"Tyreese Burn", "Brenda Tree", "Glenn Pho shizzle", "Brian Hoyies", "Glenn Pho " +
+            "shizzle","Arman Cheyia"};
 
 }

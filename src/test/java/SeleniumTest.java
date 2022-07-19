@@ -67,8 +67,17 @@ public class SeleniumTest extends BaseTest{
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A teszteset ellenőrizze a névjegykártyák tartalmát.Olvasd ki a neveket a megjelenő névjegykártyákról és ellenőrzésként hasonlítsd össze egy elvárt eredményként megadott listával.
     Használj relatív útvonalat a névjegykártya név elemeinek kiolvasásához.
      */
-    public void NamecardTest()
-    {}
+    @Test
+    public void NamecardTest() {
+        CardsPage cardsPage = new CardsPage(driver, wait);
+
+        cardsPage.navigate();
+
+        String[] expected = TestData.names;
+        String[] actual = cardsPage.names();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/table-data-download-demo.html
