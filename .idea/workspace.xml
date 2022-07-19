@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef17c2b8-773c-41ab-9135-d9a9f5b5aa7d" name="Default Changelist" comment="add AlertTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CardsPage.java" afterDir="false" />
+    <list default="true" id="ef17c2b8-773c-41ab-9135-d9a9f5b5aa7d" name="Default Changelist" comment="add NamecardTest">
+      <change afterPath="$PROJECT_DIR$/src/main/java/TablePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tesztmenedzser.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tesztmenedzser.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" afterDir="false" />
@@ -43,7 +42,7 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SeleniumTest.NamecardTest">
+  <component name="RunManager" selected="JUnit.SeleniumTest.TableTest">
     <configuration name="SeleniumTest.AlertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kepesito-vizsga-2022-funakattila" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,6 +73,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeleniumTest.TableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kepesito-vizsga-2022-funakattila" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
+      <option name="METHOD_NAME" value="TableTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeleniumTest.TestInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kepesito-vizsga-2022-funakattila" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,6 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SeleniumTest.TableTest" />
         <item itemvalue="JUnit.SeleniumTest.NamecardTest" />
         <item itemvalue="JUnit.SeleniumTest.AlertTest" />
         <item itemvalue="JUnit.SeleniumTest.SelectDayTest" />
@@ -123,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658227208548</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add NamecardTest">
+      <created>1658228618212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658228618212</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,47 +159,7 @@
     <MESSAGE value="add TestInput" />
     <MESSAGE value="add SelectDayTest" />
     <MESSAGE value="add AlertTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add AlertTest" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CardsPage.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add NamecardTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add NamecardTest" />
   </component>
 </project>

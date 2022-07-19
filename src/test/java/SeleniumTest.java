@@ -83,7 +83,19 @@ public class SeleniumTest extends BaseTest{
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/table-data-download-demo.html
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetet ellenőrizze a táblázatból a neveket, amelyeket a táblázat első oszlop tartalmaz. Gyűjtsd össze a neveket és tárold le a names.txt fájlba majd a tesztesetben a fájl tartalmát hasonlítsd össze egy elvárt eredménnyel.
      */
-    public void TableTest()
-    {}
+    @Test
+    public void TableTest() {
+        TablePage tablePage = new TablePage(driver, wait);
+
+        tablePage.navigate();
+        tablePage.createFile();
+        tablePage.writeToFile();
+
+        String[] expected = TestData.namesFromFile;
+        String[] actual = tablePage.readFromFile();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
 
 }

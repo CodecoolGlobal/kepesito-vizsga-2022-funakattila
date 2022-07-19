@@ -15,4 +15,12 @@ public class TestData {
     public static String[] names = {"Tyreese Burn", "Brenda Tree", "Glenn Pho shizzle", "Brian Hoyies", "Glenn Pho " +
             "shizzle","Arman Cheyia"};
 
+    //TC05
+    public static String[] namesFromFile = {"Tiger Nixon", "Garrett Winters", "Ashton Cox", "Cedric Kelly", "Airi " +
+            "Satou", "Brielle Williamson", "Herrod Chandler", "Rhona Davidson", "Colleen Hurst", "Sonya Frost", "Jena" +
+            " Gaines", "Quinn Flynn", "Charde Marshall", "Haley Kennedy", "Tatyana Fitzpatrick", "Michael Silva",
+            "Paul Byrd", "Gloria Little", "Bradley Greer", "Dai Rios", "Jenette Caldwell", "Yuri Berry", "Caesar " +
+            "Vance", "Doris Wilder", "Angelica Ramos", "Gavin Joyce", "Jennifer Chang", "Brenden Wagner", "Fiona " +
+            "Green", "Shou Itou", "Michelle House"};
+
 }
