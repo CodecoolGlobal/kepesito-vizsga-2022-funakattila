@@ -8,4 +8,8 @@ public class TestData {
     //TC02
     public static String selectedDayMessage = "Day selected :- Saturday";
 
+    //TC03
+
+    public static String modalMessage = "This is the place where the content for the modal dialog displays";
+
 }

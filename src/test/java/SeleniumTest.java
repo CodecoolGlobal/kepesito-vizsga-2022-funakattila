@@ -47,8 +47,20 @@ public class SeleniumTest extends BaseTest{
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/bootstrap-modal-demo.html#
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetben ellenőrizd a modal alert ablak szöveges tartalmát összahasonlítva egy általad definiált elvárt eredménnyel. Nyisd meg a Single Modal ablakot, tárolt el az ablakon megjelenő szöveget egy változóba és zárd be az ablakot a bezárás gombbal
      */
-    public void AlertTest()
-    {}
+    @Test
+    public void AlertTest() throws InterruptedException {
+        ModalPage modalPage = new ModalPage(driver, wait);
+
+        modalPage.navigate();
+        modalPage.clickLaunchButton();
+
+        String expected = TestData.modalMessage;
+        String actual = modalPage.getMessage();
+
+        Assertions.assertEquals(expected, actual);
+
+        modalPage.closeModal();
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/data-list-filter-demo.html
