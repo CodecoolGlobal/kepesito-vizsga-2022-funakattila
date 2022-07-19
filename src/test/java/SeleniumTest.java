@@ -1,5 +1,14 @@
+import io.qameta.allure.Allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import java.io.ByteArrayInputStream;
 
 public class SeleniumTest extends BaseTest{
 
@@ -10,6 +19,9 @@ public class SeleniumTest extends BaseTest{
     Használj tetszőleges tesztadatot
      */
     @Test
+    @Order(1)
+    @Story("Beviteli mezők tesztelése")
+    @Severity(SeverityLevel.NORMAL)
     public void TestInput() {
         BasicFormPage basicFormPage = new BasicFormPage(driver, wait);
 
@@ -17,6 +29,9 @@ public class SeleniumTest extends BaseTest{
         basicFormPage.closePopup();
         basicFormPage.addNumbers(TestData.sum1, TestData.sum2);
         basicFormPage.clickGetTotalButton();
+
+        Allure.addAttachment("Get total",
+                new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
         String expected = TestData.expectedTotal;
         String actual = basicFormPage.getResult();
@@ -31,11 +46,17 @@ public class SeleniumTest extends BaseTest{
     Tesztadatként használd az hét utolsó napját
      */
     @Test
+    @Order(2)
+    @Story("Lenyíló lista tesztelése")
+    @Severity(SeverityLevel.NORMAL)
     public void SelectDayTest() {
         DropDownListPage dropDownListPage = new DropDownListPage(driver, wait);
 
         dropDownListPage.navigate();
         dropDownListPage.selectLastValue();
+
+        Allure.addAttachment("Selected day",
+                new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
         String expected =TestData.selectedDayMessage;
         String actual = dropDownListPage.getResult();
@@ -48,11 +69,17 @@ public class SeleniumTest extends BaseTest{
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetben ellenőrizd a modal alert ablak szöveges tartalmát összahasonlítva egy általad definiált elvárt eredménnyel. Nyisd meg a Single Modal ablakot, tárolt el az ablakon megjelenő szöveget egy változóba és zárd be az ablakot a bezárás gombbal
      */
     @Test
+    @Order(3)
+    @Story("Felugró ablak tesztelése")
+    @Severity(SeverityLevel.NORMAL)
     public void AlertTest() throws InterruptedException {
         ModalPage modalPage = new ModalPage(driver, wait);
 
         modalPage.navigate();
         modalPage.clickLaunchButton();
+
+        Allure.addAttachment("Check text",
+                new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
         String expected = TestData.modalMessage;
         String actual = modalPage.getMessage();
@@ -68,10 +95,15 @@ public class SeleniumTest extends BaseTest{
     Használj relatív útvonalat a névjegykártya név elemeinek kiolvasásához.
      */
     @Test
+    @Order(4)
+    @Story("Névjegykártyák ellenőrzése")
+    @Severity(SeverityLevel.CRITICAL)
     public void NamecardTest() {
         CardsPage cardsPage = new CardsPage(driver, wait);
 
         cardsPage.navigate();
+        Allure.addAttachment("Name cards",
+                new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
         String[] expected = TestData.names;
         String[] actual = cardsPage.names();
@@ -84,10 +116,17 @@ public class SeleniumTest extends BaseTest{
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetet ellenőrizze a táblázatból a neveket, amelyeket a táblázat első oszlop tartalmaz. Gyűjtsd össze a neveket és tárold le a names.txt fájlba majd a tesztesetben a fájl tartalmát hasonlítsd össze egy elvárt eredménnyel.
      */
     @Test
+    @Order(5)
+    @Story("Táblázat neveinek ellenőrzése")
+    @Severity(SeverityLevel.CRITICAL)
     public void TableTest() {
         TablePage tablePage = new TablePage(driver, wait);
 
         tablePage.navigate();
+
+        Allure.addAttachment("Table",
+                new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+
         tablePage.createFile();
         tablePage.writeToFile();
 
